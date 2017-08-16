@@ -2,15 +2,74 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+@*<div class="jumbotron" style="text-align:center">
+    <h1>CHATTER</h1>
+    <img src="~/Content/Images/chatter.jpg" />
+    <p class="lead">Chatter is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
     <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+</div>*@
+
+
+<!--Test NavBar-->
+<nav class="navbar navbar-default navbar-doublerow navbar-trans navbar-fixed-top">
+    <!-- top nav -->
+    <nav class="navbar navbar-top hidden-xs">
+        <div class="container">
+            <!-- left nav top -->
+            <ul class="nav navbar-nav pull-left" style="color:black">
+                <li><a href="#"><span class="glyphicon glyphicon-thumbs-up text-white"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-globe text-white"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-pushpin text-white"></span></a></li>
+                <li><a href="#"><span class="text-white">QUESTIONS? CALL: <b>+216.409.8812</b></span></a></li>
+            </ul>
+            <!-- right nav top -->
+            <ul class="nav navbar-nav pull-right">
+        <li><a href="https://localhost:44364/Home/About" class="text-white">About Us</a></li>
+        <li><a href="https://localhost:44364/Home/Contact" class="text-white">Contact Us</a></li>
+    </ul>
+        </div>
+        <div class="dividline light-grey"></div>
+    </nav>
+    <!-- down nav -->
+    <nav class="navbar navbar-down">
+        <div class="container">
+            <div class="flex-container">
+                <div class="navbar-header flex-item">
+                    @*<div class="navbar-brand" href="#">Chatter</div>*@
+                </div>
+                <ul class="nav navbar-nav flex-item hidden-xs">
+                    <li><a href="https://localhost:44364/Account/Login">Login</a></li>
+                    <li><a href="https://localhost:44364/Account/Register">Register</a></li>
+                    <li><a href="https://localhost:44364/Chats/Index">Chats</a></li>
+                </ul>
+                <ul class="nav navbar-nav flex-item hidden-xs pull-right">
+                    @*<li><a href="#" class="">offer!</a></li>*@
+                </ul>
+                <!-- dropdown only moblie -->
+                <div class="dropdown visible-xs pull-right">
+                    <button class="btn btn-default dropdown-toggle " type="button" id="dropdownmenu" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-align-justify"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="https://localhost:44364/Account/Login">Login</a></li>
+                        <li><a href="https://localhost:44364/Account/Register">Register </a></li>
+                        <li><a href="https://localhost:44364/Chats/Index">Chats</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="https://localhost:44364/Home/Contact">contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</nav>
+<!--bg img  -->
+<header>
+    <img src="~/Content/Images/chatter.jpg" style="width:100%">
+</header>  
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Log In</h2>
         <p>
             ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
             enables a clean separation of concerns and gives you full control over markup
@@ -19,12 +78,12 @@
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
+        <h2>Register</h2>
         <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="https://localhost:44364/Account/Register">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
+        <h2>Chats</h2>
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
