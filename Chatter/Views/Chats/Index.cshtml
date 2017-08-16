@@ -13,11 +13,25 @@
 <div id="response"></div>
 <button id="getChats" class="btn btn-primary">Get Chats</button>
 
+//AJAX request using jQuery as a helper
+   	//Notice this combines Razor syntax (@Url.Action()) in order to
+    //have the compiler figure out the exact path of the controller,
+    //alongside of jQuery.
+    $.get("@Url.Action("TestJson", "Chats")", function (response) {
+    alert(response);
+    });
+
+
 <!--Test-->
 @section Scripts {
-    <script>
-	alert('hello world!');
-    </script>
+    @*<script>
+        var jsonTest = { "firstName": "Bob", "lastName": "Sauce", "children": [{ "firstName": "Barbie", "age": 19 }, { "firstName": "Ron", "age": null }] }
+
+        //now some jQuery
+        $("#response").text(jsonTest.children[1].firstName);
+
+
+    </script>*@
 }
 
 
