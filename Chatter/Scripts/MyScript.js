@@ -7,3 +7,10 @@ $(window).scroll(function () {
     }
 
 });
+
+
+$.get("@Url.Action("TestJson","Chats")", function (serverResponse) {
+    var jsonTest = JSON.parse(serverResponse);
+    console.log(jsonTest);
+    $("#response").text(jsonTest.firstName);
+});
